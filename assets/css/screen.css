@@ -29,7 +29,7 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    background: #f4f8fb;
+    background: #f9fbf9;
 }
 
 .img {
@@ -110,8 +110,6 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
-    background-size: cover;
 }
 
 .site-header:before {
@@ -123,7 +121,6 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
 }
 
 .site-header:after {
@@ -136,7 +133,6 @@ body {
     z-index: 10;
     display: block;
     height: 80px;
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));
 }
 
 .site-header.no-cover:before,
@@ -149,18 +145,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10vw 4vw;
     min-height: 200px;
-    max-height: 450px;
+    max-height: 350px;
     text-align: center;
 }
 
 .site-title {
     z-index: 10;
     margin: 0;
+    margin-top: -50px;
     padding: 0;
     font-size: 3.8rem;
     font-weight: 700;
+    color: #008000;
 }
 
 .site-logo {
@@ -228,7 +225,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     margin-right: 24px;
     padding: 11px 0;
-    color: #fff;
+    color: #008000;
     font-size: 1.7rem;
     line-height: 1em;
     font-weight: bold;
@@ -237,6 +234,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .site-nav-logo:hover {
     text-decoration: none;
+    color: #043a04;
 }
 
 .site-nav-logo img {
@@ -263,13 +261,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     margin: 0;
     padding: 10px 12px;
-    color: #fff;
-    opacity: 0.8;
+    color: #008000;
 }
 
 .nav li a:hover {
     text-decoration: none;
-    opacity: 1;
+    color: #043a04;
 }
 
 .site-nav-right {
@@ -295,17 +292,17 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     align-items: center;
     margin: 0;
     padding: 10px;
-    color: #fff;
-    opacity: 0.8;
+    color: #008000;
 }
 
-.social-link:hover {
-    opacity: 1;
+.social-link:hover svg {
+    color: #043a04;
+    fill: #043a04;
 }
 
 .social-link svg {
     height: 1.8rem;
-    fill: #fff;
+    fill: #008000;
 }
 
 .social-link-fb svg {
@@ -341,17 +338,16 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .rss-button {
-    opacity: 0.8;
 }
 
-.rss-button:hover {
-    opacity: 1;
+.rss-button:hover svg {
+    fill: #043a04;
 }
 
 .rss-button svg {
     margin-bottom: 1px;
     height: 2.1rem;
-    fill: #fff;
+    fill: #008000;
 }
 
 @media (max-width: 700px) {
@@ -365,6 +361,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     }
     .site-nav-right {
         display: none;
+    }
+    .site-header.no-cover .site-nav-left {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
     }
 }
 
@@ -572,7 +573,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-meta-date {
-    color: var(--blue);
+    color: #008000;
+    margin-bottom: 10px;
 }
 
 .post-full-title {
@@ -698,18 +700,13 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0;
 }
 
-.post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
-}
-
 .post-full-content a {
     color: #000;
-    box-shadow: var(--blue) 0 -1px 0 inset;
+    box-shadow: #008000 0 -1px 0 inset;
 }
 
 .post-full-content a:hover {
-    color: var(--blue);
+    color: #008000;
     text-decoration: none;
 }
 
@@ -949,7 +946,7 @@ Usage (In Ghost editor):
 }
 
 .footnote-backref {
-    color: var(--blue) !important;
+    color: #008000 !important;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none !important;
@@ -1207,8 +1204,8 @@ Usage (In Ghost editor):
 }
 
 .author-card-button:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+    border-color: #008000;
+    color: #008000;
     text-decoration: none;
 }
 
@@ -1452,7 +1449,11 @@ Usage (In Ghost editor):
 .floating-header-share svg {
     width: auto;
     height: 16px;
-    fill: #fff;
+    fill: #008000;
+}
+
+.floating-header-share:hover svg {
+    fill: #043a04;
 }
 
 .floating-header-share-label {
@@ -1485,11 +1486,7 @@ Usage (In Ghost editor):
 }
 
 .floating-header-share-tw {
-    background: #33b1ff;
-}
-
-.floating-header-share-fb {
-    background: #005e99;
+    background: none;
 }
 
 .progress {
@@ -1511,11 +1508,11 @@ Usage (In Ghost editor):
 }
 
 .progress::-webkit-progress-value {
-    background-color: var(--blue);
+    background-color: #008000;
 }
 
 .progress::-moz-progress-bar {
-    background-color: var(--blue);
+    background-color: #008000;
 }
 
 .progress-container {
@@ -1532,7 +1529,7 @@ Usage (In Ghost editor):
     display: block;
     width: 50%;
     height: inherit;
-    background-color: var(--blue);
+    background-color: #008000;
 }
 
 @media (max-width: 900px) {
