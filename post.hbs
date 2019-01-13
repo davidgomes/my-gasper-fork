@@ -89,7 +89,6 @@ $(document).ready(function () {
     $postContent.fitVids();
     // End fitVids
 
-    var header = document.querySelector('.floating-header');
     var title = document.querySelector('.post-full-title');
 
     var lastScrollY = window.scrollY;
@@ -118,13 +117,6 @@ $(document).ready(function () {
     function update() {
         var trigger = title.getBoundingClientRect().top + window.scrollY;
         var triggerOffset = title.offsetHeight + 35;
-
-        // show/hide floating header
-        if (lastScrollY >= trigger + triggerOffset) {
-            header.classList.add('floating-active');
-        } else {
-            header.classList.remove('floating-active');
-        }
 
         ticking = false;
     }
