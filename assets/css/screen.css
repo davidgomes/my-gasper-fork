@@ -618,6 +618,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
     font-size: 2.2rem;
     line-height: 1.5em;
     background: #fff;
+}
+
+.post-full-content p {
     max-width: 800px;
 }
 
