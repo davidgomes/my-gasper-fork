@@ -169,10 +169,8 @@ body {
     z-index: 10;
     margin: 0;
     padding: 5px 0;
-    font-size: 2.2rem;
     font-weight: 300;
-    letter-spacing: 0.5px;
-    opacity: 0.8;
+    color: var(--darkgrey);
 }
 
 @media (max-width: 500px) {
@@ -570,6 +568,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
     font-size: 1.4rem;
     font-weight: 600;
     text-transform: uppercase;
+
+    margin-bottom: 3rem;
 }
 
 .post-full-meta-date {
