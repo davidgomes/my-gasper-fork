@@ -748,6 +748,10 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 }
 
+article img {
+    max-width: 600px;
+    height: auto;
+}
 
 /* Full bleed images (#full)
 Super neat trick courtesy of @JoelDrapper
